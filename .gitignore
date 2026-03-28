@@ -6,6 +6,12 @@ __pycache__/
 # C extensions
 *.so
 
+# Claude context file
+**/CLAUDE.local.md
+**/.claude/settings.local.json
+# C extensions
+*.so
+
 # Distribution / packaging
 .Python
 build/
@@ -18,6 +24,7 @@ lib/
 lib64/
 parts/
 sdist/
+test/
 var/
 wheels/
 share/python-wheels/
@@ -25,6 +32,15 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+
+# DuckDB data
+data/
+*.duckdb
+*.db
+
+# Downloads folder
+C:/Users/Onyx V/Downloads/
+*.csv
 
 # PyInstaller
 #   Usually these files are written by a python script from a template
@@ -35,6 +51,12 @@ MANIFEST
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
 
 # Unit test / coverage reports
 htmlcov/
@@ -54,6 +76,11 @@ cover/
 # Translations
 *.mo
 *.pot
+
+# Dagster
+dagster.yaml
+dagster_home/
+.temp_dagster_home_*/
 
 # Django stuff:
 *.log
@@ -217,3 +244,88 @@ __marimo__/
 
 # Cache
 **/data_cache/
+
+
+tags
+!python_modules/dagster/dagster/_core/definitions/tags
+
+.pytest_cache
+.DS_Store
+
+docs/_build
+python_modules/dagster/docs/_build
+
+dagit_run_logs
+
+python_modules/libraries/dagster-aws/dagster_aws/ecs/config.yaml
+
+python_modules/dagster-webserver/node_modules/
+python_modules/dagster-webserver/yarn.lock
+
+# old dagit stuff
+python_modules/dagit/node_modules/
+python_modules/dagit/yarn.lock
+js_modules/dagit
+
+# Gatsby stuff
+docs/gatsby/**/node_modules/
+docs/gatsby/**/_build
+docs/gatsby/**/public
+# Next stuff
+docs/next/.mdx-data
+docs/next/public/sitemap.xml
+
+# Dask
+dask-worker-space
+
+# PyCharm IDE Config files
+.idea/
+
+# Codemod bookmarks
+.codemod.bookmark
+
+# Examples outputs
+examples/docs_snippets/docs_snippets/**/**/output/
+examples/docs_snippets/docs_snippets/**/**/output/
+examples/**/**/example.db
+
+# Telemetry instance id
+.telemetry
+
+test_results.xml
+
+# GitHub Codespaces
+pythonenv*/
+
+# Vim project-local settings
+.vim
+
+# DuckDB
+*.duckdb
+
+# Cursorrules
+.cursor
+
+# PyRight config
+pyrightconfig*
+
+# Scripts working directory
+scripts/.build
+
+# dbt .user files
+.user.yml
+
+# exponent config
+exponent.txt
+
+# google cloud storage emulater
+.cloudstorage/
+
+# personal claude files
+.claude/**/*.local.md
+.claude/.local
+
+.workstack
+.erk/scratch/
+.impl/
+.erk/config.local.toml
