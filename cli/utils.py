@@ -140,6 +140,11 @@ def select_shallow_thinking_agent(provider) -> str:
     # Ordering: medium → light → heavy (balanced first for quick tasks)
     # Within same tier, newer models first
     SHALLOW_AGENT_OPTIONS = {
+        "ollama": [
+            ("Qwen3.5:latest (9B, local)", "qwen3.5:9b"),
+            # ("GPT-OSS:latest (20B, local)", "gpt-oss:latest"),
+            # ("GLM-4.7-Flash:latest (30B, local)", "glm-4.7-flash:latest"),
+        ],
         "openai": [
             ("GPT-5 Mini - Balanced speed, cost, and capability", "gpt-5-mini"),
             ("GPT-5 Nano - High-throughput, simple tasks", "gpt-5-nano"),
@@ -165,11 +170,6 @@ def select_shallow_thinking_agent(provider) -> str:
         "openrouter": [
             ("NVIDIA Nemotron 3 Nano 30B (free)", "nvidia/nemotron-3-nano-30b-a3b:free"),
             ("Z.AI GLM 4.5 Air (free)", "z-ai/glm-4.5-air:free"),
-        ],
-        "ollama": [
-            ("Qwen3:latest (8B, local)", "qwen3:latest"),
-            ("GPT-OSS:latest (20B, local)", "gpt-oss:latest"),
-            ("GLM-4.7-Flash:latest (30B, local)", "glm-4.7-flash:latest"),
         ],
     }
 
@@ -205,6 +205,11 @@ def select_deep_thinking_agent(provider) -> str:
     # Ordering: heavy → medium → light (most capable first for deep tasks)
     # Within same tier, newer models first
     DEEP_AGENT_OPTIONS = {
+        "ollama": [
+            ("Qwen3.5:latest (9B, local)", "qwen3.5:9b"),
+            # ("GPT-OSS:latest (20B, local)", "gpt-oss:latest"),
+            # ("GLM-4.7-Flash:latest (30B, local)", "glm-4.7-flash:latest"),
+        ],
         "openai": [
             ("GPT-5.4 - Latest frontier, 1M context", "gpt-5.4"),
             ("GPT-5.2 - Strong reasoning, cost-effective", "gpt-5.2"),
@@ -232,11 +237,6 @@ def select_deep_thinking_agent(provider) -> str:
         "openrouter": [
             ("Z.AI GLM 4.5 Air (free)", "z-ai/glm-4.5-air:free"),
             ("NVIDIA Nemotron 3 Nano 30B (free)", "nvidia/nemotron-3-nano-30b-a3b:free"),
-        ],
-        "ollama": [
-            ("GLM-4.7-Flash:latest (30B, local)", "glm-4.7-flash:latest"),
-            ("GPT-OSS:latest (20B, local)", "gpt-oss:latest"),
-            ("Qwen3:latest (8B, local)", "qwen3:latest"),
         ],
     }
 
@@ -266,12 +266,12 @@ def select_llm_provider() -> tuple[str, str]:
     """Select the OpenAI api url using interactive selection."""
     # Define OpenAI api options with their corresponding endpoints
     BASE_URLS = [
+        ("Ollama", "http://127.0.0.1:11434/v1"),
         ("OpenAI", "https://api.openai.com/v1"),
         ("Google", "https://generativelanguage.googleapis.com/v1"),
         ("Anthropic", "https://api.anthropic.com/"),
         ("xAI", "https://api.x.ai/v1"),
         ("Openrouter", "https://openrouter.ai/api/v1"),
-        ("Ollama", "http://localhost:11434/v1"),
     ]
     
     choice = questionary.select(
