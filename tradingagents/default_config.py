@@ -8,7 +8,7 @@ DEFAULT_CONFIG = {
         "dataflows/data_cache",
     ),
     # LLM settings
-    "llm_provider": "openai",
+    "llm_provider": "ollama",
     "deep_think_llm": "qwen3.5:9b",
     "quick_think_llm": "qwen3.5:9b",
     "backend_url": "http://127.0.0.1:11434/v1",
