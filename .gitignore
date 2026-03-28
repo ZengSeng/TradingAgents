@@ -86,6 +86,9 @@ cover/
 dagster.yaml
 dagster_home/
 .temp_dagster_home_*/
+storage/
+history/
+schedules/
 
 # Django stuff:
 *.log
