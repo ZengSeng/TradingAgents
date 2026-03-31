@@ -36,7 +36,7 @@ dependencies = [
 tradingagents = "cli.main:app"
 
 [tool.setuptools.packages.find]
-include = ["tradingagents*", "cli*", "dagster_project"]
+include = ["tradingagents*", "cli*", "."]
 
 [tool.setuptools.package-data]
 cli = ["static/*"]
