@@ -40,3 +40,6 @@ include = ["tradingagents*", "cli*"]
 
 [tool.setuptools.package-data]
 cli = ["static/*"]
+
+[tool.dagster]
+module_name = "dagster_project.definitions"
