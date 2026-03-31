@@ -42,4 +42,4 @@ include = ["tradingagents*", "cli*", "dagster_project*"]
 cli = ["static/*"]
 
 [tool.dagster]
-module_name = "dagster_project.definitions"
+module_name = "dagster_project.dagster_project.definitions"
