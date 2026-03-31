@@ -23,6 +23,7 @@ build/
 develop-eggs/
 dist/
 downloads/
+eval_results/
 eggs/
 .eggs/
 lib/
