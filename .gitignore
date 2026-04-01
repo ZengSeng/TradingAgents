@@ -63,6 +63,7 @@ pip-delete-this-directory.txt
 .idea/
 *.swp
 *.swo
+docs/
 
 # Unit test / coverage reports
 htmlcov/
