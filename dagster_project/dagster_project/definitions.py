@@ -1,4 +1,6 @@
-from dagster import Definitions
-from .assets import nvda_decision
+from dagster import Definitions, load_assets_from_modules
+from .assets import trading_agents
 
-defs = Definitions(assets=[nvda_decision])
+defs = Definitions(
+    assets=load_assets_from_modules([trading_agents])
+)
