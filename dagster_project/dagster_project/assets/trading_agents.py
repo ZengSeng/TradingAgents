@@ -7,3 +7,4 @@ def nvda_decision():
     ta = TradingAgentsGraph(debug=True, config=DEFAULT_CONFIG.copy())
     _, decision = ta.propagate("NVDA", "2026-01-15")
     return decision
+

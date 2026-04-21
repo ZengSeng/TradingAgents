@@ -11,7 +11,7 @@ class PipelineConfig:
 
     # Database settings
     db_path: str = os.getenv("DB_PATH", "data/duckdb/yfinance.duckdb")
-    db_path_test: str = os.getenv("DB_PATH", "../data/duckdb/yfinance.duckdb")
+    db_path_test: str = os.getenv("DB_PATH", "../../../data/duckdb/yfinance.duckdb")
 
     # Watch list settings
     watch_list: Set[str] = None
